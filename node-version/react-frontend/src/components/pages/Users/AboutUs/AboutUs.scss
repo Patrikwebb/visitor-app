@@ -1,0 +1,17 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  margin-top: rem(90);
+}
+
+.urlLink {
+  @include Tiny-Regular;
+  // color: $white;
+}
+
+.currentPage {
+  @include Tiny-Regular;
+  // color: $white;
+}

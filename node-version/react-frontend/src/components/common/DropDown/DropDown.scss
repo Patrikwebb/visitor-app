@@ -1,0 +1,9 @@
+.dropDownBoxContainer {
+  @include Caption-Bold;
+
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $primary;
+}

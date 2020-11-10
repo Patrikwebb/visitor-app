@@ -1,0 +1,23 @@
+.icon {
+  display: flex;
+  // position: relative;
+  color: white;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: -12px;
+  right: -8px;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  background: $primary;
+
+  font-size: 12px;
+}

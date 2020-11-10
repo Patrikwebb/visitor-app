@@ -1,0 +1,163 @@
+@function rem($px) {
+  @return ($px / $rem-base) + rem;
+}
+@mixin Uber-Bold {
+  font-size: rem($uber);
+  font-weight: bold;
+  color: $black;
+}
+@mixin Uber-Regular {
+  font-size: rem($uber);
+  font-weight: 300;
+  color: $black;
+}
+@mixin Hero-Bold {
+  font-size: rem($hero);
+  font-weight: bold;
+  color: $black;
+}
+@mixin Hero-Regular {
+  font-size: rem($hero);
+  font-weight: 300;
+  color: $black;
+}
+@mixin H1-Bold {
+  font-size: rem($h1);
+  font-weight: bold;
+  color: $black;
+
+  @media (max-width: $webLarge) {
+    font-size: rem($h2);
+  }
+
+  @media (max-width: $iphoneLarge) {
+    font-size: rem($h4);
+  }
+}
+@mixin H1-Regular {
+  font-size: rem($h1);
+  font-weight: 300;
+  color: $black;
+}
+@mixin H2-Bold {
+  font-size: rem($h2);
+  font-weight: bold;
+  color: $black;
+}
+@mixin H2-Regular {
+  font-size: rem($h2);
+  font-weight: 300;
+  color: $black;
+}
+@mixin H3-Bold {
+  font-size: rem($h3);
+  font-weight: bold;
+  color: $black;
+}
+@mixin H3-Regular {
+  font-size: rem($h3);
+  font-weight: 300;
+  color: $black;
+}
+@mixin H4-Bold {
+  font-size: rem($h4);
+  font-weight: bold;
+  color: $black;
+
+  @media (max-width: $webMedium) {
+    font-size: rem($h5);
+  }
+
+  @media (max-width: $iphoneLarge) {
+    font-size: rem($small);
+  }
+}
+@mixin H4-Regular {
+  font-size: rem($h4);
+  font-weight: 300;
+  color: $black;
+
+  @media (max-width: $webMedium) {
+    font-size: rem($h5);
+  }
+
+  @media (max-width: $iphoneLarge) {
+    font-size: rem($small);
+  }
+}
+@mixin Lead-Bold {
+  font-size: rem($lead);
+  font-weight: bold;
+  color: $black;
+}
+@mixin Lead-Regular {
+  font-size: rem($lead);
+  font-weight: 300;
+  color: $black;
+}
+@mixin H5-Bold {
+  font-size: rem($h5);
+  font-weight: bold;
+  color: $black;
+
+  @media (max-width: $webMedium) {
+    font-size: rem($body);
+  }
+}
+@mixin H5-Regular {
+  font-size: rem($h5);
+  font-weight: 300;
+  color: $black;
+
+  @media (max-width: $webMedium) {
+    font-size: rem($body);
+  }
+}
+@mixin Body-Bold {
+  font-size: rem($body);
+  font-weight: bold;
+  color: $black;
+}
+@mixin Body-Regular {
+  font-size: rem($body);
+  font-weight: 300;
+  color: $black;
+}
+@mixin Small-Bold {
+  font-size: rem($small);
+  font-weight: bold;
+  color: $black;
+
+  @media (max-width: $webMedium) {
+    font-size: rem($caption);
+  }
+}
+@mixin Small-Regular {
+  font-size: rem($small);
+  font-weight: 300;
+  color: $black;
+
+  @media (max-width: $webMedium) {
+    font-size: rem($caption);
+  }
+}
+@mixin Caption-Bold {
+  font-size: rem($caption);
+  font-weight: bold;
+  color: $black;
+}
+@mixin Caption-Regular {
+  font-size: rem($caption);
+  font-weight: 300;
+  color: $black;
+}
+@mixin Tiny-Bold {
+  font-size: rem($tiny);
+  font-weight: bold;
+  color: $black;
+}
+@mixin Tiny-Regular {
+  font-size: rem($tiny);
+  font-weight: 300;
+  color: $black;
+}

@@ -1,0 +1,10 @@
+.heroLanding {
+  height: 100vh;
+  background-image: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  padding: 5rem 0;
+
+  .landingWrapper {
+    max-width: auto;
+    margin: auto;
+  }
+}

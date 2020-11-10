@@ -1,0 +1,28 @@
+.helioToast {
+  border-radius: rem(4);
+  text-align: center;
+
+  &.info {
+    background-color: $primary;
+    color: $white;
+  }
+
+  &.error {
+    background-color: $error;
+    color: $white;
+  }
+
+  &.warning {
+    background-color: $warning;
+    color: $black;
+  }
+
+  // Has to use button here to be able to set styles into react-tostify component
+  button {
+    display: flex;
+    align-self: center;
+    color: $white;
+    opacity: 1;
+    margin-right: rem(5);
+  }
+}

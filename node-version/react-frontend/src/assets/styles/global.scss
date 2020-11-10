@@ -1,0 +1,22 @@
+@import "../fonts/stylesheet.css";
+@import "normalize.scss";
+@import "breakpoint.scss";
+@import "variables.scss";
+@import "utils.scss";
+
+// * {
+//   font-size: 10px;
+// }
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.tinyRegular {
+  @include Tiny-Regular;
+}

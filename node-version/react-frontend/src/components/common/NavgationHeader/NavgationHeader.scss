@@ -1,0 +1,327 @@
+.navgationHeader {
+  position: absolute;
+  top: 0;
+  z-index: 900;
+
+  &.lightBackground {
+    i {
+      svg {
+        fill: #000;
+      }
+    }
+
+    .show {
+      i {
+        // Icons color on burger menu
+        svg {
+          fill: #000;
+        }
+      }
+    }
+
+    .burger span,
+    .burger span:after,
+    .burger span:before {
+      background-color: #000;
+    }
+
+    .burger.clicked span,
+    .burger.clicked span:after,
+    .burger.clicked span:before {
+      background: #000;
+    }
+  }
+
+  &.scrollAbove90Px {
+    background-color: inherit;
+  }
+
+  &.scrollBelow90Px {
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    i {
+      svg {
+        fill: #000;
+      }
+    }
+
+    .button .secondary {
+      background: pink;
+    }
+
+    .burger span,
+    .burger span:after,
+    .burger span:before {
+      background: #000;
+    }
+
+    // Exit Burger scrolled
+    .burger.clicked span,
+    .burger.clicked span:after,
+    .burger.clicked span:before {
+      background: #000;
+    }
+  }
+}
+
+.innerContent {
+  transition: ease 0.2s;
+  padding: rem(10) 10vw;
+}
+
+.navigation {
+  display: flex;
+
+  list-style: none;
+
+  li {
+    text-decoration: none;
+
+    padding: 0 1.5rem;
+
+    color: #000;
+    transition: ease 0.2s;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    &.active {
+      color: $primary;
+    }
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+}
+
+.item {
+  text-decoration: none;
+
+  border: none;
+
+  color: #000;
+  transition: ease 0.2s;
+
+  font-size: rem(12);
+  font-weight: 500;
+
+  p {
+    opacity: 0.6;
+    margin: 0;
+    padding: 0;
+
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+      color: $black;
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.header {
+  padding: rem(16) rem(0);
+  color: #000;
+  position: fixed;
+  width: 100%;
+  transition: ease 0.2s;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 50;
+
+  @include breakpoint(WebMedium) {
+    padding: 0;
+    position: relative;
+    justify-content: unset;
+    align-items: unset;
+    display: block;
+  }
+
+  .burgerClickArea {
+    height: rem(38);
+    width: rem(54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .innerContentBurger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .zIndex {
+      z-index: 60;
+    }
+
+    .zIndexClicked {
+      z-index: 90;
+    }
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*  BURGER
+========================================== */
+.burger {
+  position: relative;
+  border-radius: rem(4);
+  z-index: 90;
+  width: rem(28);
+  height: rem(18);
+}
+
+.burger span {
+  position: relative;
+  margin-top: rem(9);
+  margin-bottom: rem(9);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+  display: block;
+  width: rem(28);
+  height: rem(2);
+  background-color: #fff;
+  outline: 1px solid transparent;
+  -webkit-transition-property: background-color, -webkit-transform;
+  -moz-transition-property: background-color, -moz-transform;
+  -o-transition-property: background-color, -o-transform;
+  transition-property: background-color, transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.burger span::before,
+.burger span::after {
+  position: absolute;
+  content: "";
+}
+
+.burger span::before {
+  top: -8px;
+}
+
+.burger span::after {
+  top: 8px;
+}
+
+.burger.clicked span {
+  background-color: transparent !important;
+}
+
+.burger.clicked span::before {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -moz-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.clicked span::after {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -moz-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.burger.clicked span:before,
+.burger.clicked span:after {
+  background-color: #fff;
+  width: rem(30);
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.burgerMenuContainer {
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding-left: 1.5rem;
+  padding-bottom: 10rem;
+  height: 100vh;
+  display: -ms-flexbox;
+  overflow: hidden;
+  display: flex;
+  -ms-flex-pack: center;
+  flex-direction: column;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: flex-start;
+  position: fixed;
+  z-index: 40;
+  overflow-y: auto;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition: transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+  &.show {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  .ulMenu {
+    padding-top: 10rem;
+    list-style: none;
+
+    li {
+      padding-bottom: 2.4rem;
+
+      color: #000;
+      transition: all 0.3s ease;
+      opacity: 1;
+      transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+
+      .menuLink {
+        color: #000;
+        text-decoration: none;
+
+        &:active {
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+node_modules
+build
+stats
+tscout
+.DS_STORE
+.vscode
+.idea/
