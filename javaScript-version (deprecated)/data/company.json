@@ -1,0 +1,26 @@
+[
+  {
+    "companyName": "ÅF",
+    "companyId": "1",
+    "employees": [
+      {
+        "username": "Patrik"
+      },
+      {
+        "username": "Niklas"
+      }
+    ]
+  },
+  {
+    "companyName": "Telia",
+    "companyId": "2",
+    "employees": [
+      {
+        "username": "Johanna"
+      },
+      {
+        "username": "Liesl"
+      }
+    ]
+  }
+]
