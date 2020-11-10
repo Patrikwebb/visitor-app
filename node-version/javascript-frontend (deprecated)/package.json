@@ -1,0 +1,16 @@
+{
+  "name": "companyapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "concurrently": "concurrently \"npm run lite-server\" \"npm run node\"",
+    "start": "lite-server"
+  },
+  "author": "Patrik Berggren",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
