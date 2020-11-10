@@ -1,15 +1,3 @@
-#### How to start server
+#### How to start FrontEnd and BackEnd
 
-> cd server
-
-> npm install
-
-> npm start
-
-#### How to start webclient
-
-> cd webclient
-
-> npm install
-
-> npm start
+- Se README files inside the react-frontend and mongodb-backend project.
