@@ -1,0 +1,22 @@
+{
+  "name": "company_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-mongo-mac": "mkdir mongo-db; mongod --dbpath mongo-db",
+    "start-mongo-windows": "md mongo-db & \"C:/Program Files/MongoDb/Server/4.4/bin/mongod.exe\" --dbpath mongo-db",
+    "start": "node app.js"
+  },
+  "author": "Patrik Berggren",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dateformat": "^3.0.3",
+    "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.13"
+  }
+}
