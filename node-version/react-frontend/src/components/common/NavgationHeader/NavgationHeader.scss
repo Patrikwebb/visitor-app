@@ -133,7 +133,7 @@
 }
 
 .header {
-  padding: rem(16) rem(0);
+  padding: rem(2) rem(0);
   color: #000;
   position: fixed;
   width: 100%;
@@ -144,13 +144,13 @@
 
   z-index: 50;
 
-  @include breakpoint(WebMedium) {
-    padding: 0;
-    position: relative;
-    justify-content: unset;
-    align-items: unset;
-    display: block;
-  }
+  // @include breakpoint(WebMedium) {
+  //   padding: 0;
+  //   position: relative;
+  //   justify-content: unset;
+  //   align-items: unset;
+  //   display: block;
+  // }
 
   .burgerClickArea {
     height: rem(38);
@@ -166,6 +166,10 @@
     justify-content: space-between;
     align-items: center;
 
+    // @include breakpoint(webLarge) {
+    //   display: none;
+    // }
+
     .zIndex {
       z-index: 60;
     }
@@ -178,6 +182,10 @@
   .hamburger {
     display: flex;
     align-items: center;
+
+    // @include breakpoint(webLarge) {
+    //   display: none;
+    // }
   }
 }
 

@@ -75,31 +75,7 @@ function NavgationHeader() {
     >
       <header className={cx(styles.header)}>
         {systemContext.windowProps.designLayout &&
-        systemContext.windowProps.designLayout >= DesignLayout.WebMedium ? (
-          <div className={cx(styles.innerContent)}>
-            <ul className={cx(styles.navigation)}>
-              <Link to={homeUrl}>
-                <Icon name={ICONS.logo} />
-              </Link>
-              {/* List of URL's */}
-              {/* {urls.map((url, index) => {
-                return (
-                  <li key={index}>
-                    <Link className={styles.item} to={url.to}>
-                      <p
-                        className={cx({
-                          [styles.active]: location.pathname === url.to,
-                        })}
-                      >
-                        {url.name}
-                      </p>
-                    </Link>
-                  </li>
-                );
-              })} */}
-            </ul>
-          </div>
-        ) : (
+        systemContext.windowProps.designLayout < DesignLayout.WebLarge ? (
           <div className={styles.innerContentBurger}>
             <Link
               className={cx(styles.zIndex, {
@@ -149,6 +125,14 @@ function NavgationHeader() {
                 </ul>
               </div>
             </div>
+          </div>
+        ) : (
+          <div className={cx(styles.innerContent)}>
+            <ul className={cx(styles.navigation)}>
+              <Link to={homeUrl}>
+                <Icon name={ICONS.logo} />
+              </Link>
+            </ul>
           </div>
         )}
       </header>

@@ -35,7 +35,7 @@ function Footer() {
             <div className={styles.item}>
               <p>Contact</p>
               <ul className={styles.footersLists}>
-                <li onClick={() => infoToast("Not implemented")}>
+                <li>
                   <a href="/om-oss">About</a>
                 </li>
               </ul>

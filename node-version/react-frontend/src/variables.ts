@@ -3,6 +3,8 @@ export let COLORS = {
   secondary: "#e6e4df",
   base: "#f3ffaf",
 
+  lightGrey: "#c2c1c1",
+
   black: "#000",
   white: "#FFF",
 };

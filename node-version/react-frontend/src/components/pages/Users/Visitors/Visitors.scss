@@ -16,12 +16,6 @@
   line-height: 1.2;
 }
 
-.aboutParagraf {
-  @include H5-Regular;
-  line-height: 1.5;
-  margin-top: rem(30);
-}
-
 .image {
   display: block;
   width: 400px;
@@ -81,4 +75,66 @@
     height: rem(400);
     width: rem(1400);
   }
+}
+
+.visitorsContent {
+  width: 100%;
+  margin-top: rem(40);
+  background-color: #f8f8f8;
+}
+
+.visitorsHeader {
+  width: 100%;
+  height: rem(40);
+  background-color: #e9e9e9;
+}
+
+.companyList {
+  padding: rem(20) rem(30);
+}
+
+.companyContent {
+  background-color: $white;
+  padding: rem(20) rem(30);
+
+  li {
+    list-style: none;
+  }
+}
+
+.company {
+  @include Tiny-Regular;
+  margin-bottom: rem(5);
+}
+
+.visitorText {
+  @include Small-Regular;
+  margin-bottom: rem(5);
+  margin-top: rem(10);
+}
+
+.visitor {
+  @include Tiny-Regular;
+  margin-top: rem(20);
+  width: rem(150);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deleteButton {
+  margin-left: rem(20);
+
+  padding: rem(20);
+
+  height: rem(25);
+  width: rem(25);
+
+  border-radius: rem(2);
+}
+
+.deleteIcon {
+  height: rem(20);
+  width: rem(20);
 }

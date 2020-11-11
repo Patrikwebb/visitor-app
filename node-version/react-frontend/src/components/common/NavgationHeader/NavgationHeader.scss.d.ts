@@ -1,5 +1,9 @@
 // This file is generated automatically
 export const tinyRegular: string;
+export const marginTop10: string;
+export const marginTop20: string;
+export const marginTop32: string;
+export const marginTop56: string;
 export const navgationHeader: string;
 export const lightBackground: string;
 export const show: string;

@@ -31,6 +31,9 @@ function Button(props: ButtonProps) {
     case Button.types.SECONDARY:
       buttonTypeClassName = styles.secondary;
       break;
+    case Button.types.RED:
+      buttonTypeClassName = styles.red;
+      break;
     default:
       buttonTypeClassName = styles.primary;
   }
@@ -79,6 +82,7 @@ function Button(props: ButtonProps) {
 Button.types = {
   SECONDARY: "secondary",
   PRIMARY: "primary",
+  RED: "red",
 };
 
 export default Button;

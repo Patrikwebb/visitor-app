@@ -1,22 +1,21 @@
 import Axios, { AxiosError, AxiosInstance } from "axios";
 
-import Account from "./service/account";
+import Company from "./service/company";
+import Visitor from "./service/visitor";
 
 export interface ResponseError extends AxiosError {}
 
 class Api {
   public service: {
-    account: Account;
+    visitor: Visitor;
+    company: Company;
   };
 
   constructor(private http: AxiosInstance) {
     this.service = {
-      account: new Account(this.http),
+      visitor: new Visitor(this.http),
+      company: new Company(this.http),
     };
-
-    // this.http.defaults.headers.common["Authorization"] = localStorage.getItem(
-    //   "token"
-    // );
   }
 }
 

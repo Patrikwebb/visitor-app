@@ -1,0 +1,22 @@
+.navigationInfo {
+  width: 100%;
+  margin: 0 10vw;
+}
+
+.urlLink {
+  z-index: 1;
+  @include Tiny-Regular;
+  color: $white;
+
+  position: relative;
+  top: rem(85);
+}
+
+.currentPage {
+  z-index: 1;
+  @include H2-Regular;
+  color: $white;
+  position: relative;
+
+  top: rem(105);
+}

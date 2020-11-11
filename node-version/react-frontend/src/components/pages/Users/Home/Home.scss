@@ -1,5 +1,139 @@
 .wrapper {
   width: 100%;
+
+  margin-bottom: rem(0);
+
+  @include breakpoint(webSmall) {
+    margin-bottom: rem(180);
+  }
+}
+
+.welcomeText {
+  @include Tiny-Regular;
+
+  max-width: 300;
+  margin: 0 rem(20);
+
+  position: relative;
+  top: calc(-5rem + 1vw);
+  max-width: 300px;
+  padding: 0;
+
+  color: $white;
+
+  @include breakpoint(webSmall) {
+    @include Tiny-Regular;
+    color: $white;
+    max-width: 300px;
+  }
+
+  @include breakpoint(webMedium) {
+    @include H4-Regular;
+    top: calc(-10rem + 1vw);
+
+    color: $white;
+    max-width: 800px;
+  }
+
+  @include breakpoint(webLarge) {
+    @include H2-Regular;
+    top: calc(-15rem + 1vw);
+
+    color: $white;
+    max-width: 1200px;
+
+    padding: rem(20) calc(8rem + 1vw);
+  }
+
+  @include breakpoint(webXXLarge) {
+    @include H1-Regular;
+    top: calc(-25rem + 1vw);
+
+    color: $white;
+    margin: auto;
+
+    max-width: 1480px;
+    padding: rem(70) calc(2rem + 1vw);
+  }
+
+  @include breakpoint(webXXLarge) {
+  }
+}
+
+.imageBackground {
+  background: black;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: rem(1680);
+  margin: auto;
+  height: 166px;
+
+  @include breakpoint(webSmall) {
+    height: rem(166);
+    width: rem(400);
+  }
+
+  @include breakpoint(webMedium) {
+    height: rem(292);
+    width: rem(700);
+  }
+
+  @include breakpoint(webLarge) {
+    height: rem(500);
+    width: rem(1224);
+  }
+
+  @include breakpoint(webXXLarge) {
+    height: rem(500);
+    width: rem(1300);
+  }
+
+  @include breakpoint(webXXLarge) {
+    height: rem(500);
+    width: rem(1400);
+  }
+}
+
+.image {
+  display: block;
+  width: 400px;
+  opacity: 0.5;
+
+  @include breakpoint(webSmall) {
+    width: rem(400);
+  }
+
+  @include breakpoint(webMedium) {
+    width: rem(700);
+  }
+
+  @include breakpoint(webLarge) {
+    width: rem(1224);
+  }
+
+  @include breakpoint(webXXLarge) {
+    width: rem(1300);
+  }
+
+  @include breakpoint(webXXLarge) {
+    width: rem(1400);
+  }
+}
+
+.homeContent {
+  max-width: 1280px;
+  margin: auto;
+
+  padding: rem(70) calc(2rem + 1vw);
+}
+
+.homeHeader {
+  @include H4-Regular;
+  line-height: 1.2;
+}
+
+.homeParagraf {
+  @include Small-Regular;
+  line-height: 1.5;
+  margin-top: rem(30);
 }

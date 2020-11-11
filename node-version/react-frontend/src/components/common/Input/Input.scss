@@ -1,0 +1,136 @@
+.input {
+  width: 100%;
+  position: relative;
+  max-width: rem(300);
+  border-radius: rem(8);
+  height: 35px;
+  padding: 0.5rem 0;
+  transition: border 0.2s ease-in-out;
+
+  @include breakpoint(webSmall) {
+    height: 45px;
+    max-width: rem(450);
+  }
+
+  // @include breakpoint(webMedium) {
+  //   height: rem(292);
+  //   width: rem(700);
+  // }
+
+  // @include breakpoint(webLarge) {
+  //   height: rem(500);
+  //   width: rem(1224);
+  // }
+
+  // @include breakpoint(webXXLarge) {
+  //   height: rem(500);
+  //   width: rem(1300);
+  // }
+
+  // @include breakpoint(webXXLarge) {
+  //   height: rem(500);
+  //   width: rem(1400);
+  // }
+}
+
+.inputWrapper {
+  position: relative;
+  height: rem(40);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  width: rem(24);
+  height: rem(24);
+
+  fill: $primary;
+
+  transition: fill 0.1s, border 0.1s;
+  transform: translateY(-50%);
+
+  &.err {
+    fill: $error;
+  }
+
+  &.success {
+    fill: $success;
+  }
+}
+
+.leftIconPos {
+  @extend .icon;
+
+  left: rem(12);
+}
+
+.rightIconPos {
+  @extend .icon;
+
+  right: rem(12);
+}
+
+.textField {
+  width: 100%;
+  outline: none;
+  box-shadow: none;
+  border: 2px solid $light-grey;
+  border-radius: rem(4);
+  font-size: rem(18);
+  padding: rem(8);
+  transition: color 0.3s, border 0.3s;
+  appearance: none;
+  background: transparent;
+
+  &.left-icon {
+    padding-left: rem(40);
+  }
+
+  &.right-icon {
+    padding-right: rem(40);
+  }
+
+  &.err {
+    border-color: $error;
+    color: $error;
+  }
+
+  &.success {
+    border-color: $success;
+    color: $success;
+  }
+
+  &:focus {
+    box-shadow: none;
+    border: 2px solid $black;
+  }
+}
+
+.disabledTextField {
+  width: 100%;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid $light-grey;
+  border-radius: rem(4);
+  height: rem(40);
+  font-size: rem(18);
+  padding: rem(8);
+  transition: color 0.3s, border 0.3s;
+  appearance: none;
+  background: $light-grey;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-top: rem(8);
+
+  color: $light-grey;
+  fill: $primary;
+}
+
+.messageIcon {
+  width: rem(16);
+  height: rem(16);
+  margin-right: rem(12);
+}

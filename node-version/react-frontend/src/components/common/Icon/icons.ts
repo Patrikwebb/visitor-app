@@ -5,6 +5,7 @@ import arrowLeftSvg from "assets/svg/arrow_left.svg";
 import checkboxChecked from "assets/svg/checkbox_checked.svg";
 import checkboxUnchecked from "assets/svg/checkbox_unchecked.svg";
 import logoSvg from "assets/svg/logo.svg";
+import trashSvg from "assets/svg/trash.svg";
 
 export type SvgType = React.ReactNode;
 
@@ -20,6 +21,7 @@ interface IconI {
   checkboxUnchecked: SvgType;
 
   logo: SvgType;
+  trash: SvgType;
 }
 
 const ICONS: IconI = {
@@ -33,6 +35,7 @@ const ICONS: IconI = {
   checkboxUnchecked: checkboxUnchecked,
 
   logo: logoSvg,
+  trash: trashSvg,
 };
 
 export default ICONS;

@@ -4,5 +4,6 @@ export const marginTop10: string;
 export const marginTop20: string;
 export const marginTop32: string;
 export const marginTop56: string;
-export const container: string;
-export const content: string;
+export const navigationInfo: string;
+export const urlLink: string;
+export const currentPage: string;

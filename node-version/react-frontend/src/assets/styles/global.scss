@@ -20,3 +20,16 @@ button:focus {
 .tinyRegular {
   @include Tiny-Regular;
 }
+
+.marginTop10 {
+  margin-top: rem(10);
+}
+.marginTop20 {
+  margin-top: rem(20);
+}
+.marginTop32 {
+  margin-top: rem(32);
+}
+.marginTop56 {
+  margin-top: rem(56);
+}

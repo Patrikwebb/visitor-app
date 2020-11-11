@@ -16,8 +16,6 @@ Simple application that have three views.
 - List of all vsitor
 - Able to connect visitors with a company
 
-#### Javascript-Version
-
 #### How to start the apps
 
 - Se README files inside the selected project.
