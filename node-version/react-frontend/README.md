@@ -15,3 +15,5 @@ Company app front-end
 _URL and PORT_
 
 > http://localhost:3000/
+
+![](visitor_app.gif)
