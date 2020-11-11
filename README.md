@@ -29,3 +29,45 @@ Simple application that have three views.
 #### How to start the apps
 
 - Se README files inside the selected project.
+
+### How long time it toke
+
+- About 12 hours
+
+### What's included
+
+_ReactJS with Hooks API_
+
+- Axios Signin, Company and Visitor API
+- Webpack configuration for Hot-reload, Bundeling, SVG, Images and Fonts
+- Prettier code formatting
+- Typescript for JS
+- Moment for dates
+- Info, Warning and error toast with React-Toast
+- Pages
+  - Home
+  - Overview
+  - Visitors
+  - About us
+- React components
+  - Button
+  - DropDown
+  - Icon
+  - NavigatioHeader + Burger meny
+  - Toast
+  - Typografy
+- SystemContext that handles response design in Javascript
+- Sass Mixins that handles response design in CSS
+
+_MongoDB Database_
+
+- Company table
+- Vistor table
+
+_NodeJS BackEnd with MongodDB and Mongoose_
+
+- Sign in routes for visitors
+- Company routes to create, update and delete visitors
+- Visitor routes to get all visitors
+
+_Depricated Javascript version from my school time_
