@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const singin = require("./routes/signin");
 const mongodb = require("./routes/mongodb");
 const company = require("./routes/company");
+const visitor = require("./routes/visitor");
 
 // MongoDB Mongoose
 const mongoose = require("mongoose");
@@ -48,6 +49,7 @@ app.use(bodyParser.urlencoded());
 app.use("/signin", singin);
 app.use("/mongodb", mongodb);
 app.use("/company", company);
+app.use("/visitor", visitor);
 
 app.listen(3040, () => {
   console.debug("Server listening on port 3040!");

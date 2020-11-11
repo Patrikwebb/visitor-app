@@ -26,7 +26,7 @@ router.get(GET_COMPANIES, (req, res) => {
     Company.find((err, company) => {
       if (err) {
         console.debug(err);
-        res.send(company);
+        res.send(500);
       } else {
         // object of all the companies
         console.debug(company);
