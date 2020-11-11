@@ -1,6 +1,12 @@
 ## README for company visitor app
 
+### React FrontEnd views
+
 ![](visitor_app.gif)
+
+### Inspirational views
+
+![](afry_inspo.gif)
 
 Simple application that have three views.
 
