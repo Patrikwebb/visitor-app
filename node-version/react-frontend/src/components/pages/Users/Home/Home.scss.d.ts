@@ -8,6 +8,8 @@ export const wrapper: string;
 export const welcomeText: string;
 export const imageBackground: string;
 export const image: string;
+export const input: string;
 export const homeContent: string;
 export const homeHeader: string;
 export const homeParagraf: string;
+export const button: string;

@@ -13,11 +13,7 @@ function AboutUs() {
           <NavigationInfo link={"/Hem/Om oss"} currentPage={"Om Oss"} />
 
           <div className={styles.imageBackground}>
-            <img
-              className={styles.image}
-              src={AboutUsImage}
-              alt="torchlight in the sky"
-            />
+            <img className={styles.image} src={AboutUsImage} alt="ingen bild" />
           </div>
 
           <div className={styles.aboutUsContent}>

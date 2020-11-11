@@ -90,7 +90,11 @@
 }
 
 .companyList {
-  padding: rem(20) rem(30);
+  padding: rem(12);
+
+  @include breakpoint(webSmall) {
+    padding: rem(20) rem(30);
+  }
 }
 
 .companyContent {
@@ -116,11 +120,19 @@
 .visitor {
   @include Tiny-Regular;
   margin-top: rem(20);
-  width: rem(150);
+  width: rem(200);
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: unset;
+  flex-direction: column;
+  justify-content: unset;
+
+  @include breakpoint(webSmall) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .deleteButton {

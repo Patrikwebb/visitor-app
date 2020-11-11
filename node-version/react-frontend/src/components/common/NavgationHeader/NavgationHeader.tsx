@@ -22,8 +22,12 @@ const urls: NavigationUrls[] = [
     to: "/hem",
   },
   {
-    name: "Artiklar",
-    to: "/artiklar",
+    name: "Översikt",
+    to: "/oversikt",
+  },
+  {
+    name: "Besökare",
+    to: "/besokare",
   },
   {
     name: "Om oss",
@@ -130,7 +134,15 @@ function NavgationHeader() {
           <div className={cx(styles.innerContent)}>
             <ul className={cx(styles.navigation)}>
               <Link to={homeUrl}>
-                <Icon name={ICONS.logo} />
+                <Icon
+                  name={
+                    location.pathname !== homeUrl
+                      ? ICONS.logo
+                      : location.pathname === homeUrl && scrollBelow90px
+                      ? ICONS.logo
+                      : ICONS.logoWhite
+                  }
+                />
               </Link>
             </ul>
           </div>

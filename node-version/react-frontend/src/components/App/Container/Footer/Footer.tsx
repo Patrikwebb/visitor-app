@@ -21,13 +21,13 @@ function Footer() {
             <div className={styles.item}>
               <p>Legal</p>
               <ul className={styles.footersLists}>
-                <li onClick={() => infoToast("Not implemented")}>
+                <li onClick={() => infoToast("Inte implementerat")}>
                   <a>Legal notice</a>
                 </li>
-                <li onClick={() => infoToast("Not implemented")}>
+                <li onClick={() => infoToast("Inte implementerat")}>
                   <a>Policy</a>
                 </li>
-                <li onClick={() => infoToast("Not implemented")}>
+                <li onClick={() => infoToast("Inte implementerat")}>
                   <a>Cookies</a>
                 </li>
               </ul>

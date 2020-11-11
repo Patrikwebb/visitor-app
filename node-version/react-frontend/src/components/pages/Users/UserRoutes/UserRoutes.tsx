@@ -26,10 +26,10 @@ function UserRoutes() {
             <Visitors />
           </Route>
           <Route exact path="/">
-            <Redirect to="/" />
+            <Redirect to="/hem" />
           </Route>
           <Route path="/">
-            <Redirect to="/" />
+            <Redirect to="/hem" />
           </Route>
         </Switch>
       </ScrollToTop>

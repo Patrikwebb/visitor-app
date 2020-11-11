@@ -4,16 +4,17 @@ import cx from "classnames";
 
 import Api from "api";
 
-import VisitorsImage from "assets/images/visitors.jpg";
+import OverviewImage from "assets/images/overview.jpg";
 
 import Button from "components/common/Button";
 import Icon, { ICONS } from "components/common/Icon";
+import Input from "components/common/Input";
 import NavigationInfo from "components/common/NavigationInfo";
+import { errorToast, infoToast, warningToast } from "components/common/Toast";
 
 import { COLORS } from "variables";
 
 import * as styles from "./Overview.scss";
-import { errorToast, infoToast } from "components/common/Toast";
 
 interface CompaniesWithEmployeesI {
   id: string;
@@ -27,6 +28,7 @@ interface EmployeesI {
 }
 
 function Overview() {
+  const [company, setCompany] = React.useState("");
   const [companies, setCompanies] = React.useState(
     [] as CompaniesWithEmployeesI[]
   );
@@ -101,6 +103,22 @@ function Overview() {
       });
   };
 
+  const addCompany = () => {
+    if (company.length >= 3) {
+      Api.service.company
+        .addCompany(company)
+        .then(() => {
+          infoToast(company + " har skapats");
+          loadCompaniesAndVisitors();
+        })
+        .catch(() => {
+          warningToast("Ingen åtkomst till servern");
+        });
+    } else {
+      infoToast("Namnet måste vara längre än 3 tecken");
+    }
+  };
+
   return (
     <>
       <div className={styles.wrapper}>
@@ -110,15 +128,39 @@ function Overview() {
           <div className={styles.imageBackground}>
             <img
               className={styles.image}
-              src={VisitorsImage}
-              alt="torchlight in the sky"
+              src={OverviewImage}
+              alt="ingen bild"
             />
           </div>
 
           <div className={styles.aboutUsContent}>
             <h1 className={styles.aboutHeader}>Skapa företag</h1>
 
-            <h1 className={styles.aboutHeader}>Senaste företagen</h1>
+            <Input
+              title="Company"
+              name="företag"
+              placeholder="Namn på företaget"
+              value={company}
+              className={styles.marginTop10}
+              type="text"
+              onChange={(name, value) => {
+                setCompany(value);
+              }}
+              validate={(value: string) => value.length > 0}
+            />
+
+            <Button
+              className={styles.marginTop32}
+              type={Button.types.PRIMARY}
+              onClick={addCompany}
+              submit
+            >
+              Skapa företag
+            </Button>
+
+            <h1 className={cx(styles.aboutHeader, styles.marginTop56)}>
+              Senaste företagen
+            </h1>
 
             <div className={styles.visitorsContent}>
               <div className={styles.visitorsHeader}></div>
@@ -126,7 +168,7 @@ function Overview() {
               <div className={styles.companyList}>
                 {companies.map((company) => {
                   return (
-                    <div className={styles.companyContent}>
+                    <div key={company.id} className={styles.companyContent}>
                       <ul>
                         <li className={styles.company}>
                           {company.companyName}
@@ -135,7 +177,7 @@ function Overview() {
 
                         {company.employees.map((employee) => {
                           return (
-                            <li className={styles.visitor}>
+                            <li key={company.id} className={styles.visitor}>
                               <span>{employee.name}</span>
                               <Button
                                 type={Button.types.RED}
@@ -165,6 +207,8 @@ function Overview() {
                     </div>
                   );
                 })}
+
+                {companies.length === 0 && <div>Inga företag</div>}
               </div>
             </div>
 

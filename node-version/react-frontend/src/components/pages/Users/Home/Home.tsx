@@ -1,6 +1,8 @@
 import * as React from "react";
 import { useHistory } from "react-router";
 
+import cx from "classnames";
+
 import HeroLanding from "assets/images/heroLanding.jpg";
 
 import Api from "api";
@@ -8,7 +10,7 @@ import Api from "api";
 import Button from "components/common/Button";
 import Input from "components/common/Input";
 
-import { infoToast } from "components/common/Toast";
+import { infoToast, warningToast } from "components/common/Toast";
 
 import * as styles from "./Home.scss";
 
@@ -20,12 +22,17 @@ function Home() {
 
   const addVisitor = () => {
     if (visitor.length >= 3) {
-      Api.service.visitor.addVisitor(visitor, company).then(() => {
-        infoToast("Välkommen " + visitor);
-        history.push("/oversikt");
-      });
+      Api.service.visitor
+        .addVisitor(visitor, company)
+        .then(() => {
+          infoToast("Välkommen " + visitor);
+          history.push("/oversikt");
+        })
+        .catch(() => {
+          warningToast("Ingen åtkomst till servern");
+        });
     } else {
-      infoToast("Name must be 3 charathers");
+      infoToast("Namnet måste vara längre än 3 tecken");
     }
   };
 
@@ -33,11 +40,7 @@ function Home() {
     <>
       <div className={styles.wrapper}>
         <div className={styles.imageBackground}>
-          <img
-            className={styles.image}
-            src={HeroLanding}
-            alt="torchlight in the sky"
-          />
+          <img className={styles.image} src={HeroLanding} alt="ingen bild" />
           <h1 className={styles.welcomeText}>
             AFRY är ett internationellt företag inom teknik, design och
             rådgivning.
@@ -57,7 +60,7 @@ function Home() {
             name="name"
             placeholder="Name"
             value={visitor}
-            className={styles.marginTop10}
+            className={cx(styles.marginTop10)}
             type="text"
             onChange={(name, value) => {
               setVisitor(value);
@@ -70,7 +73,7 @@ function Home() {
             name="företag"
             placeholder="företag (valfritt)"
             value={company}
-            className={styles.marginTop20}
+            className={cx(styles.input, styles.marginTop10)}
             type="text"
             onChange={(name, value) => {
               setCompany(value);
@@ -79,9 +82,10 @@ function Home() {
           />
 
           <Button
-            className={styles.marginTop32}
+            className={styles.button}
             type={Button.types.PRIMARY}
             onClick={addVisitor}
+            submit
           >
             Checka in
           </Button>

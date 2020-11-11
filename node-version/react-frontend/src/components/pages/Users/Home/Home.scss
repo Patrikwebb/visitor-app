@@ -4,7 +4,11 @@
   margin-bottom: rem(0);
 
   @include breakpoint(webSmall) {
-    margin-bottom: rem(180);
+    margin-bottom: rem(40);
+  }
+
+  @include breakpoint(webXLarge) {
+    margin-bottom: rem(120);
   }
 }
 
@@ -120,6 +124,14 @@
   }
 }
 
+.input {
+  padding-top: rem(18);
+
+  @include breakpoint(webSmall) {
+    padding-top: rem(18);
+  }
+}
+
 .homeContent {
   max-width: 1280px;
   margin: auto;
@@ -136,4 +148,12 @@
   @include Small-Regular;
   line-height: 1.5;
   margin-top: rem(30);
+}
+
+.button {
+  margin-top: rem(56);
+
+  @include breakpoint(webSmall) {
+    margin-top: rem(40);
+  }
 }
