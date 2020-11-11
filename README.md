@@ -10,7 +10,7 @@ _make browser window smaller if you can't see the full gif_
 _make browser window smaller if you can't see the full gif_
 ![](afry_inspo.gif)
 
-Simple application that have three views.
+### Simple application that have three views.
 
 1st view:
 
@@ -26,7 +26,7 @@ Simple application that have three views.
 - List of all visitor
 - Able to connect visitors with a company
 
-#### How to start the apps
+### How to start the apps
 
 - Se README files inside the selected project.
 
