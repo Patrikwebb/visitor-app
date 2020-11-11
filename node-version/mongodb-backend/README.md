@@ -56,6 +56,7 @@ _Connections string_
 _URL_
 https://www.mongodb.com/products/compass
 
+_make browser window smaller if you can't see the full gif_
 ![](docs/mongodb_compass.gif)
 
 ### API Docs
@@ -64,4 +65,5 @@ _Insomnia_
 
 You can import the API in Insomnia, see exported file in api-docs.
 
+_make browser window smaller if you can't see the full gif_
 ![](docs/rest_api_insomnia.gif)

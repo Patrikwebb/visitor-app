@@ -16,4 +16,5 @@ _URL and PORT_
 
 > http://localhost:3000/
 
+_make browser window smaller if you can't see the full gif_
 ![](visitor_app.gif)

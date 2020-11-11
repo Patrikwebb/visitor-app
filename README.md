@@ -2,10 +2,12 @@
 
 ### React FrontEnd views
 
+_make browser window smaller if you can't see the full gif_
 ![](visitor_app.gif)
 
 ### Inspirational views
 
+_make browser window smaller if you can't see the full gif_
 ![](afry_inspo.gif)
 
 Simple application that have three views.
