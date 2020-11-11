@@ -55,3 +55,13 @@ _Connections string_
 
 _URL_
 https://www.mongodb.com/products/compass
+
+![](docs/mongodb_compass.gif)
+
+### API Docs
+
+_Insomnia_
+
+You can import the API in Insomnia, see exported file in api-docs.
+
+![](docs/rest_api_insomnia.gif)
