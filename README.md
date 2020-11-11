@@ -5,7 +5,7 @@
 _make browser window smaller if you can't see the full gif_
 ![](visitor_app.gif)
 
-### Inspirational views
+### Inspirational views from afry.se
 
 _make browser window smaller if you can't see the full gif_
 ![](afry_inspo.gif)
