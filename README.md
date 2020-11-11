@@ -15,7 +15,7 @@ Simple application that have three views.
 
 3rd view:
 
-- List of all vsitor
+- List of all visitor
 - Able to connect visitors with a company
 
 #### How to start the apps
