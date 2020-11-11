@@ -16,5 +16,12 @@ _URL and PORT_
 
 > http://localhost:3000/
 
+### React FrontEnd views
+
 _make browser window smaller if you can't see the full gif_
-![](visitor_app.gif)
+![](docs/visitor_app.gif)
+
+### Responsive design
+
+_make browser window smaller if you can't see the full gif_
+![](docs/responsive_design.gif)
