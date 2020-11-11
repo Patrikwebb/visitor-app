@@ -1,5 +1,7 @@
 ## README for company visitor app
 
+![](visitor_app.gif)
+
 Simple application that have three views.
 
 1st view:
